@@ -1,0 +1,83 @@
+@import 'vars';
+
+.MyOrder{
+    width: 360px;
+    padding: 24px;
+    box-sizing: border-box;
+    position: absolute;
+    right: -360px;
+    background-color: $--text-input-field;
+    top: 70px;
+    border-radius: 6px;
+    border: 1px solid #8e8e8e;
+    bottom: auto;
+    transition: 1s ease;
+    animation: swipe-left 1s forwards;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+@keyframes swipe-left {
+    100% { transform: translateX(-360px);}
+}
+
+.title-container{
+    display: flex;
+}
+
+.title-container img{
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+
+.title{
+    font-size: $--lg;
+    font-weight: bold;
+}
+
+.order{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: $--text-input-field;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+.order p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+
+.order p span:nth-child(1){
+    font-size: $--md;
+    font-weight: bold;
+}
+
+.order p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+}
+
+.PrimaryBtn{
+    background-color: $--hospital-green;
+    border-radius: 19px;
+    border: none;
+    color: $--white;
+    width: 100%;
+    cursor: pointer;
+    font-size:$--md;
+    font-weight: bold;
+    height: 50px;
+    padding: 5px 10px;
+
+}
+
+@media (max-width: 640px) {
+    .my-order{
+        width: 100%;
+    }
+}
