@@ -5,7 +5,7 @@ class MyDocument extends Document {
         return(
             <Html lang="es">
                 <Head>
-                    
+                    <meta charSet="utf-8" />
                 </Head>
                 <body>
                     <Main />
